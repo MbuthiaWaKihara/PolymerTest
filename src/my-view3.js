@@ -10,6 +10,7 @@
 
 import { LitElement, html, css } from 'lit-element';
 import sharedStyles from './shared-styles.js';
+import { _sortTestDictionary } from './sort-dictionary.js'; //calling this function is a no-op
 
 class MyView3 extends LitElement {
 
@@ -70,7 +71,7 @@ class MyView3 extends LitElement {
   firstUpdated(changedProperties) {
     super.firstUpdated(changedProperties);
     this.fetchTodos();
-    console.log("test dictionary", this.testDictionary);
+    // this.testDictionary = _sortTestDictionary(JSON.parse(JSON.stringify(this.testDictionary)));
   }
 
   render() {
